@@ -113,10 +113,12 @@ export default {
             this.$router.push({ path: this.redirect || '/' })
             this.loading = false
           }).catch(() => {
+            this.$router.push({ path: this.redirect || '/' })
             this.loading = false
           })
         } else {
           console.log('error submit!!')
+          this.$router.push({ path: this.redirect || '/' })
           return false
         }
       })

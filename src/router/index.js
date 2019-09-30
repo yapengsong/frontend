@@ -170,6 +170,29 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    path: '/help',
+    component: Layout,
+    redirect: '/help/list',
+    name: 'Help',
+    meta: { title: '更新记录', icon: 'example' },
+    children: [
+      {
+        path: 'list',
+        name: 'Table',
+        component: () => import('@/views/help/helplist'),
+        meta: { title: '更新列表', icon: 'table' }
+      }
+      /*,
+      {
+        path: 'add',
+        name: 'Form',
+        component: () => import('@/views/help/add'),
+        meta: { title: '添加记录', icon: 'form' }
+      }
+       */
+    ]
+  },
 
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }

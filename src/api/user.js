@@ -8,7 +8,7 @@ import request from '@/utils/request'
 // 登录
 export function login(data) {
   return request({
-    url: '/user/login',
+    url: '/api/v1/photo/help/query',
     method: 'post',
     data
   })
